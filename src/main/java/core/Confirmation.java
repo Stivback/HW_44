@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 
 public class Confirmation {
 	
+	
+	//validate class
 	public static void validate(WebDriver driver, String url) {
 		
 		Common.open(url);

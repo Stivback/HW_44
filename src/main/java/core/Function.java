@@ -21,12 +21,16 @@ public class Function {
 		driver.get(url);
 		System.out.println("UserAgent: " + (String) ((JavascriptExecutor) driver).executeScript("return navigator.userAgent;" ));
 	}
-
+	
+	
+	//isPresent class
 	public static boolean isPresent(By by) {
 		if (driver.findElements(by).size() > 0) return true; 
 		else return false;
 		}
-
+	
+	
+	//isVisible class
 	public static boolean isVisible(By by) {
 		if ((driver.findElements(by).size() > 0) && driver.findElement(by).isDisplayed()) return true; 
 		else return false;
@@ -92,7 +96,7 @@ public class Function {
 	static By el_42 = By.id("id_gender");						//confirmation
 	static By el_43 = By.id("id_back_button");					//confirmation
 	
-	
+	//pageValidation class
 	public static void pageSignUpValidation(String url) {
 		
 		open(url);
@@ -136,23 +140,24 @@ public class Function {
 		
 		System.out.println("31. Element [Copyright (dynamic)]: " +(isPresent(el_31) ? "Exists" : "Not exist"));		// signup
 		System.out.println("32. Element [OS & Browser (dynamic)]: "+(isPresent(el_32) ? "Exists" : "Not exist"));		// signup
-		
 		System.out.println("33. Element [Error Line]: " + 		(isPresent(el_33) ? "Exists" : "Not exist"));		// signup
-		
 		System.out.println("34. Element [First Name Error]: " + 	(isPresent(el_34) ? "Exists" : "Not exist"));		// signup
 		System.out.println("35. Element [Last Name Error]: " + 	(isPresent(el_35) ? "Exists" : "Not exist"));		// signup
+		
 		System.out.println("36. Element [Email Error]: " + 		(isPresent(el_36) ? "Exists" : "Not exist"));		// signup
 		System.out.println("37. Element [Phone Error]: " + 		(isPresent(el_37) ? "Exists" : "Not exist"));		// signup
-
 		System.out.println("38. Element [First Name Error (img)]: "+(isPresent(el_38) ? "Exists" : "Not exist"));		// signup
 		System.out.println("39. Element [Last Name Error (img)]: "+(isPresent(el_39) ? "Exists" : "Not exist"));		// signup
 		System.out.println("40. Element [Email Error (img)]: " + 	(isPresent(el_40) ? "Exists" : " Not exist"));		// signup
+		
 		System.out.println("41. Element [Phone Error (img)]: " + 	(isPresent(el_41) ? "Exists" : " Not exist"));		// signup
+		
+		
+		
 		
 		System.out.println("------------- VISABILITY----------------");
 		
 		System.out.println("33. Element [Error Line]: " + 		(isVisible(el_33) ? "Visible" : " Not visible"));		// signup
-		
 		System.out.println("34. Element [First Name Error]: " + 	(isVisible(el_34) ? "Visible" : " Not visible"));		// signup
 		System.out.println("35. Element [Last Name Error]: " + 	(isVisible(el_35) ? "Visible" : " Not visible"));		// signup
 		System.out.println("36. Element [Email Error]: " + 		(isVisible(el_36) ? "Visible" : " Not visible"));		// signup
@@ -162,9 +167,10 @@ public class Function {
 		System.out.println("39. Element [Last Name Error (img)]: "+(isVisible(el_39) ? "Visible" : " Not visible"));	// signup
 		System.out.println("40. Element [Email Error (img)]: " + 	(isVisible(el_40) ? "Visible" : " Not visible"));		// signup
 		System.out.println("41. Element [Phone Error (img)]: " + 	(isVisible(el_41) ? "Visible" : " Not visible"));		// signup
-		
 		System.out.println("43. Element [Back (button)]: " + 		(isVisible(el_43) ? "Visible" : " Not visible"));		// signup
 		
+		
+		System.out.println("----------------------------------------");
 		System.out.println("OS/Browser: " + driver.findElement(el_32).getText());										// signup
 		
 		}
